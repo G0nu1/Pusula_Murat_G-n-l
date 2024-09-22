@@ -5,7 +5,7 @@ from datetime import datetime
 from sklearn.preprocessing import LabelEncoder
 from sklearn.impute import KNNImputer
 
-df = pd.read_excel('C:\\Users\\mrtgn\\Desktop\\pusula\\Pusula_Murat_Gönül\\SED.xlsx')
+df = pd.read_excel('C:\\Users\\mrtgn\\Desktop\\pusula\\Pusula_Murat_Gönül\\side_effect_data.xlsx')
 
 current_year = datetime.now().year
 df['Age'] = current_year - pd.to_datetime(df['Dogum_Tarihi']).dt.year
@@ -62,5 +62,5 @@ summary_df = pd.DataFrame({
     'Missing Percentage': (df.isnull().sum() / len(df)) * 100
 })
 
-df.to_excel('fill_data.xlsx', index=False)
+df.to_excel('Fill_Missing.xlsx', index=False)
 print(summary_df)

@@ -5,7 +5,7 @@ from datetime import datetime
 import pandas as pd
 
 
-df = pd.read_excel('C:\\Users\\mrtgn\\Desktop\\pusula\\Pusula_Murat_Gönül\\SED.xlsx')
+df = pd.read_excel('C:\\Users\\mrtgn\\Desktop\\pusula\\Pusula_Murat_Gönül\\side_effect_data.xlsx')
 
 le = LabelEncoder()
 
@@ -49,5 +49,5 @@ summary_df = pd.DataFrame({
     'Missing Percentage': (df.isnull().sum() / len(df)) * 100
 })
 
-df.to_excel('Encoding_data.xlsx', index=False)
+df.to_excel('Encoding_Data.xlsx', index=False)
 print(summary_df)

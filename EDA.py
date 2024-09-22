@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 
-df = pd.read_excel('C:\\Users\\mrtgn\\Desktop\\pusula\\Pusula_Murat_Gönül\\SED.xlsx')
+df = pd.read_excel('C:\\Users\\mrtgn\\Desktop\\pusula\\Pusula_Murat_Gönül\\side_effect_data.xlsx')
 
 # Create a summary DataFrame
 summary_df = pd.DataFrame({
@@ -128,6 +128,6 @@ result_df = result_df.join(side_effect_frequency)
 # Sort by drug frequency in descending order
 result_df = result_df.sort_values('Drug Frequency', ascending=False)
 
-result_df.to_excel('data.xlsx', index=False)
+result_df.to_excel('EDA.xlsx', index=False)
 print(result_df)
 
